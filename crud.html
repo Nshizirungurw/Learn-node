@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./crud.css">
+    <title>Document</title>
+</head>
+<body onload="readAll()">
+    <div class="container">
+        <div>
+            <form class="create-form" method="post" > 
+                <input type="text" class="name" required>
+                <input type="email" class="email"required>
+                <button type="button" onclick="create()" id="sub-btn">Create</button>
+            </form>
+            <form class="update-form">
+                <input type="text" hidden class="id">
+                <input type="text" class="uname" required>
+                <input type="email" class="uemail" required>
+                <button type="button" onclick="update()">Update</button>
+            </form>
+            <table class="table" >
+                <tr>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Action</td>
+                </tr>  
+                <tbody class="table-data">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="./crud.js"></script>
+</body>
+</html>
